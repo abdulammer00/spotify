@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class="main">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<ng-container *ngIf="listOfArtist !== null">
+  <div *ngFor="let artist of listOfArtist">
+    <p>{{ artist.name }}</p>
+    <p>{{ artist.genres }}</p>
+    <p>{{ artist.followers.total }}</p>
+  </div>
+</ng-container>
